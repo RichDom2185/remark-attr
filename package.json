@@ -40,16 +40,6 @@
     "rehype-stringify": "8.x",
     "remark-parse": "8.x.x",
     "remark-rehype": "7.x",
-    "unified": "9.x",
-    "xo": "0.32.x"
-  },
-  "xo": {
-    "space": true,
-    "rules": {
-      "comma-dangle": [
-        "error",
-        "always-multiline"
-      ]
-    }
+    "unified": "9.x"
   }
 }
