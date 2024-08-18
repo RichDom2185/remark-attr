@@ -1,6 +1,6 @@
 "use strict";
 
-import htmlElemAttr from "html-element-attributes";
+import htmlElemAttr from "html-element-attributes" with { type: "json" };
 import isWhiteSpace from "is-whitespace-character";
 import parseAttr from "md-attr-parser";
 

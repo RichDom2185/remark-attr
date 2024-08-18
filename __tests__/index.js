@@ -10,7 +10,13 @@ import reFootnt from "remark-footnotes";
 import reParse from "remark-parse";
 import remark2rehype from "remark-rehype";
 import unified from "unified";
-import plugin from "..";
+import plugin from "../src/index.js";
+
+import { dirname } from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const renderDefault = (text) =>
   unified()
