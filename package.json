@@ -36,6 +36,7 @@
     "cross-env": "^7.0.3",
     "del-cli": "3.x.x",
     "parse5": "6.x",
+    "prettier": "^3.3.3",
     "rehype-raw": "4.x",
     "rehype-stringify": "8.x",
     "remark-parse": "8.x.x",
