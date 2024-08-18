@@ -88,12 +88,10 @@ function tokenizeGenerator(prefix, oldParser, config) {
     if (parsedAttr) {
       if (config.scope && config.scope !== "none") {
         const filtredProp = filterAttributes(parsedAttr.prop, config, type);
-        if (filtredProp !== {}) {
-          if (eaten.data) {
-            eaten.data.hProperties = filtredProp;
-          } else {
-            eaten.data = { hProperties: filtredProp };
-          }
+        if (eaten.data) {
+          eaten.data.hProperties = filtredProp;
+        } else {
+          eaten.data = { hProperties: filtredProp };
         }
       }
 
@@ -161,12 +159,10 @@ function tokenizeModifierGenerator(oldParser, config) {
     if (parsedAttr) {
       if (config.scope && config.scope !== "none") {
         const filtredProp = filterAttributes(parsedAttr.prop, config, type);
-        if (filtredProp !== {}) {
-          if (eaten.data) {
-            eaten.data.hProperties = filtredProp;
-          } else {
-            eaten.data = { hProperties: filtredProp };
-          }
+        if (eaten.data) {
+          eaten.data.hProperties = filtredProp;
+        } else {
+          eaten.data = { hProperties: filtredProp };
         }
       }
 
@@ -299,15 +295,13 @@ function tokenizeFencedCode(oldParser, config) {
       if (config.scope && config.scope !== "none") {
         const filtredProp = filterAttributes(parsedAttr.prop, config, type);
 
-        if (filtredProp !== {}) {
-          if (eaten.data) {
-            eaten.data.hProperties = {
-              ...eaten.data.hProperties,
-              ...filtredProp,
-            };
-          } else {
-            eaten.data = { hProperties: filtredProp };
-          }
+        if (eaten.data) {
+          eaten.data.hProperties = {
+            ...eaten.data.hProperties,
+            ...filtredProp,
+          };
+        } else {
+          eaten.data = { hProperties: filtredProp };
         }
       }
 

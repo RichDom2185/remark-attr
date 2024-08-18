@@ -76,14 +76,12 @@ function tokenizeGenerator(prefix, oldParser, config) {
     if (parsedAttr) {
       if (config.scope && config.scope !== "none") {
         var filtredProp = filterAttributes(parsedAttr.prop, config, type);
-        if (filtredProp !== {}) {
-          if (eaten.data) {
-            eaten.data.hProperties = filtredProp;
-          } else {
-            eaten.data = {
-              hProperties: filtredProp
-            };
-          }
+        if (eaten.data) {
+          eaten.data.hProperties = filtredProp;
+        } else {
+          eaten.data = {
+            hProperties: filtredProp
+          };
         }
       }
       eaten = eat(prefix + parsedAttr.eaten)(eaten);
@@ -128,14 +126,12 @@ function tokenizeModifierGenerator(oldParser, config) {
     if (parsedAttr) {
       if (config.scope && config.scope !== "none") {
         var filtredProp = filterAttributes(parsedAttr.prop, config, type);
-        if (filtredProp !== {}) {
-          if (eaten.data) {
-            eaten.data.hProperties = filtredProp;
-          } else {
-            eaten.data = {
-              hProperties: filtredProp
-            };
-          }
+        if (eaten.data) {
+          eaten.data.hProperties = filtredProp;
+        } else {
+          eaten.data = {
+            hProperties: filtredProp
+          };
         }
       }
       lastChild.value = lastChild.value.slice(0, index + 1);
@@ -271,14 +267,12 @@ function tokenizeFencedCode(oldParser, config) {
     if (parsedAttr) {
       if (config.scope && config.scope !== "none") {
         var filtredProp = filterAttributes(parsedAttr.prop, config, type);
-        if (filtredProp !== {}) {
-          if (eaten.data) {
-            eaten.data.hProperties = _objectSpread(_objectSpread({}, eaten.data.hProperties), filtredProp);
-          } else {
-            eaten.data = {
-              hProperties: filtredProp
-            };
-          }
+        if (eaten.data) {
+          eaten.data.hProperties = _objectSpread(_objectSpread({}, eaten.data.hProperties), filtredProp);
+        } else {
+          eaten.data = {
+            hProperties: filtredProp
+          };
         }
       }
       if (parsedByCustomAttr) {
