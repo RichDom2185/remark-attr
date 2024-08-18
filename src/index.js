@@ -1,8 +1,8 @@
 "use strict";
 
-const parseAttr = require("md-attr-parser");
-const htmlElemAttr = require("html-element-attributes");
-const isWhiteSpace = require("is-whitespace-character");
+import htmlElemAttr from "html-element-attributes";
+import isWhiteSpace from "is-whitespace-character";
+import parseAttr from "md-attr-parser";
 
 const supportedElements = new Set([
   "link",
@@ -22,7 +22,7 @@ const particularElements = new Set(["fencedCode"]);
 
 const particularTokenize = {};
 
-const DOMEventHandler = require("./dom-event-handler.js");
+import DOMEventHandler from "./dom-event-handler.js";
 
 /* Table convertion between type and HTML tagName */
 const convTypeTag = {
@@ -328,7 +328,7 @@ particularTokenize.fencedCode = tokenizeFencedCode;
 
 remarkAttr.SUPPORTED_ELEMENTS = supportedElements;
 
-module.exports = remarkAttr;
+export default remarkAttr;
 
 /* Function that is exported */
 function remarkAttr(userConfig) {
